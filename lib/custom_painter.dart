@@ -12,12 +12,10 @@ class DrawingPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Draw completed strokes
     for (final stroke in strokes) {
       _drawStroke(canvas, stroke);
     }
 
-    // Draw current stroke
     if (currentStroke.isNotEmpty) {
       _drawStroke(canvas, currentStroke);
     }
